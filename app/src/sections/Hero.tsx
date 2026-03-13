@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import planetSrc from '../assets/planet.jpg';
 
 const metrics = [
   { label: '可交易技能资产', value: '128+' },
@@ -10,6 +9,7 @@ const metrics = [
 
 export function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const planetSrc = `${import.meta.env.BASE_URL}planet.jpg`;
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
