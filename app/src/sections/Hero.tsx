@@ -30,7 +30,7 @@ export function Hero() {
           transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1] }}
           className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white mb-6 tracking-tight"
         >
-          AgentFlow Exchange
+          AgentFlow 官网
         </motion.h1>
 
         <motion.p
@@ -39,7 +39,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
           className="text-lg sm:text-xl md:text-2xl text-white/90 mb-5 font-light"
         >
-          一人公司官网升级为智能代理资产证券化交易平台
+          AgentFlow 官网 && 智能代理资产证券化交易平台
         </motion.p>
 
         <motion.p

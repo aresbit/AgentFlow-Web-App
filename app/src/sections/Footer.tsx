@@ -36,7 +36,7 @@ export function Footer() {
               <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
                 <Workflow className="w-5 h-5 text-orange-400" />
               </div>
-              <span className="text-white text-lg font-medium">AgentFlow Exchange</span>
+              <span className="text-white text-lg font-medium">AgentFlow 官网</span>
             </div>
             <p className="text-white/40 text-sm leading-relaxed mb-6 max-w-sm">
               让技能、Agent 能力与代码包从“交付服务”升级为“可公开定价并自动结算交付的数字资产”。
@@ -98,7 +98,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-white/30 text-sm">© 2026 AgentFlow Exchange. All rights reserved.</p>
+          <p className="text-white/30 text-sm">© 2026 AgentFlow 官网. All rights reserved.</p>
           <p className="text-white/30 text-sm">Built for agent asset securitization marketplace.</p>
         </div>
       </div>

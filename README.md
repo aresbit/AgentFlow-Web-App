@@ -1,6 +1,6 @@
 # AgentFlow Web App
 
-一人公司官网重构版，定位为**智能代理资产证券化交易平台**（Agent Asset Securitization Marketplace）。
+定位：**AgentFlow 官网 && 智能代理资产证券化交易平台**。
 
 ## 项目目标
 
@@ -54,4 +54,3 @@ npm run build
 1. 增加后端服务：资产注册、订单簿、托管结算、交付网关
 2. 引入签名验证与 SBOM 扫描
 3. 增加真实成交回执与争议仲裁流程
-
