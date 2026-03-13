@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import planetSrc from '../assets/planet.jpg';
 
 const metrics = [
   { label: '可交易技能资产', value: '128+' },
@@ -39,7 +40,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
           className="text-lg sm:text-xl md:text-2xl text-white/90 mb-5 font-light"
         >
-          AgentFlow 官网 && 智能代理资产证券化交易平台
+          智能代理资产证券化交易平台
         </motion.p>
 
         <motion.p
@@ -103,7 +104,7 @@ export function Hero() {
         initial={{ opacity: 0, y: 80 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.6, delay: 0.4, ease: 'easeOut' }}
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-4xl pointer-events-none"
+        className="absolute bottom-[-48px] sm:bottom-[-28px] left-1/2 -translate-x-1/2 w-[120vw] sm:w-full max-w-5xl pointer-events-none opacity-95"
         style={{
           transform: `translate(-50%, ${mousePosition.y}px)`,
         }}
@@ -116,13 +117,9 @@ export function Hero() {
             }}
           />
           <img
-            src="/planet.jpg"
+            src={planetSrc}
             alt="Agent token globe"
-            className="w-full h-auto object-cover"
-            style={{
-              maskImage: 'linear-gradient(to top, black 60%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to top, black 60%, transparent 100%)',
-            }}
+            className="w-full h-auto object-cover drop-shadow-[0_0_80px_rgba(255,107,53,0.35)]"
           />
         </div>
       </motion.div>
