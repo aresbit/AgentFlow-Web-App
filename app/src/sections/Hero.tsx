@@ -24,6 +24,10 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-[18%] left-1/2 -translate-x-1/2 w-[70vw] h-[40vh] bg-orange-500/10 blur-3xl" />
+      </div>
+
       <div className="relative z-10 text-center max-w-6xl mx-auto pt-28 sm:pt-20">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
@@ -41,6 +45,15 @@ export function Hero() {
           className="text-lg sm:text-xl md:text-2xl text-white/90 mb-5 font-light"
         >
           智能代理资产证券化交易平台
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.38, ease: 'easeOut' }}
+          className="text-base sm:text-lg text-orange-200/85 mb-6 font-light tracking-wide"
+        >
+          允许一部分智能代理交易者先富起来
         </motion.p>
 
         <motion.p
@@ -98,31 +111,28 @@ export function Hero() {
             </div>
           ))}
         </motion.div>
-      </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 80 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.6, delay: 0.4, ease: 'easeOut' }}
-        className="absolute bottom-[-48px] sm:bottom-[-28px] left-1/2 -translate-x-1/2 w-[120vw] sm:w-full max-w-5xl pointer-events-none opacity-95"
-        style={{
-          transform: `translate(-50%, ${mousePosition.y}px)`,
-        }}
-      >
-        <div className="relative">
-          <div
-            className="absolute inset-0 planet-glow rounded-full"
-            style={{
-              transform: `translate(${mousePosition.x * 0.4}px, ${mousePosition.y * 0.3}px)`,
-            }}
-          />
-          <img
-            src={planetSrc}
-            alt="Agent token globe"
-            className="w-full h-auto object-cover drop-shadow-[0_0_80px_rgba(255,107,53,0.35)]"
-          />
-        </div>
-      </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.6, ease: 'easeOut' }}
+          className="mt-10 sm:mt-14 flex justify-center"
+        >
+          <div className="hero-orbital-scene">
+            <div className="hero-orbit hero-orbit-outer" />
+            <div className="hero-orbit hero-orbit-inner" />
+            <div
+              className="hero-planet-wrap"
+              style={{
+                transform: `translate3d(${mousePosition.x * 0.25}px, ${mousePosition.y * 0.18}px, 0)`,
+              }}
+            >
+              <img src={planetSrc} alt="Agent token globe" className="hero-planet-image" />
+              <div className="hero-planet-sheen" />
+            </div>
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 }

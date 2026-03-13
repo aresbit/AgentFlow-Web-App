@@ -80,6 +80,76 @@
               0 0 300px 100px rgba(200, 90, 50, 0.15);
 }
 
+.hero-orbital-scene {
+  position: relative;
+  width: min(74vw, 580px);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+}
+
+.hero-orbital-scene::before {
+  content: "";
+  position: absolute;
+  inset: 18%;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(255, 107, 53, 0.35) 0%, rgba(255, 107, 53, 0.06) 44%, transparent 72%);
+  filter: blur(20px);
+  z-index: 0;
+}
+
+.hero-orbit {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+.hero-orbit-outer {
+  width: 92%;
+  height: 54%;
+  transform: rotate(-16deg);
+  animation: orbitSweep 20s linear infinite;
+}
+
+.hero-orbit-inner {
+  width: 82%;
+  height: 44%;
+  transform: rotate(14deg);
+  border-color: rgba(255, 107, 53, 0.28);
+  animation: orbitSweepReverse 26s linear infinite;
+}
+
+.hero-planet-wrap {
+  position: relative;
+  width: 66%;
+  aspect-ratio: 1 / 1;
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 26px 100px rgba(255, 120, 70, 0.28), 0 10px 36px rgba(0, 0, 0, 0.55);
+  background: #140d0b;
+  z-index: 2;
+}
+
+.hero-planet-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+  filter: saturate(1.06) contrast(1.05);
+}
+
+.hero-planet-sheen {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 28% 24%, rgba(255, 255, 255, 0.36) 0%, rgba(255, 255, 255, 0) 38%),
+    radial-gradient(circle at 70% 76%, rgba(0, 0, 0, 0.38) 0%, rgba(0, 0, 0, 0) 48%);
+}
+
 /* Button hover glow */
 .btn-glow:hover {
   box-shadow: 0 0 20px rgba(255, 107, 53, 0.4),
@@ -90,6 +160,16 @@
 @keyframes twinkle {
   0%, 100% { opacity: 0.3; }
   50% { opacity: 1; }
+}
+
+@keyframes orbitSweep {
+  from { transform: rotate(-16deg); }
+  to { transform: rotate(344deg); }
+}
+
+@keyframes orbitSweepReverse {
+  from { transform: rotate(14deg); }
+  to { transform: rotate(-346deg); }
 }
 
 /* Fade in up animation */
